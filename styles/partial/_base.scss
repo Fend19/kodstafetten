@@ -1,14 +1,26 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .imageContainer {
-  content: " ";
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-wrapper {
+    position: relative;
+    &__img {
+        display: block;
+        object-fit: cover;
+        inline-size: 100%;
+        min-inline-size: 100%;
+        block-size: 100%;
+        // position: absolute;
+    }
 }
