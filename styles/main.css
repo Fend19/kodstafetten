@@ -53,6 +53,29 @@
   padding: 20px;
 }
 
+.nav .nav__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  place-content: center space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 2.5em;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.nav .nav__btn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3px;
+  background: #94ffd9;
+}
+
 .nav .logo {
   width: 50px;
   height: 50px;
@@ -78,5 +101,7 @@
           box-shadow: 0 12px 9px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px #979797;
   background-image: radial-gradient(circle at 50% 50%, #9ce4c9, #000000 142%);
+  -webkit-clip-path: polygon(100.42% 69.25%, 100.88% -0.04%, 17.98% -0.04%, -0.44% 27.67%, 11.84% 79.64%, 53.07% 94.81%);
+          clip-path: polygon(100.42% 69.25%, 100.88% -0.04%, 17.98% -0.04%, -0.44% 27.67%, 11.84% 79.64%, 53.07% 94.81%);
 }
 /*# sourceMappingURL=main.css.map */
