@@ -37,8 +37,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 10vh;
-  padding: 0 5vw 0 5vw;
+  position: relative;
+  padding: 0.5em 5vw 0.5em 5vw;
   background-color: #202020;
 }
 
@@ -48,12 +48,7 @@
   color: #94ffd9;
 }
 
-.nav nav {
-  color: #94ffd9;
-  padding: 20px;
-}
-
-.nav .nav__btn {
+.nav__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,21 +60,101 @@
           flex-direction: column;
   width: 2.5em;
   cursor: pointer;
-  z-index: 0;
+  position: relative;
+  color: #94ffd9;
+  z-index: 2;
 }
 
-.nav .nav__btn span {
+.nav__btn span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 3px;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 1px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  width: 40px;
+  border-radius: 1px;
   background: #94ffd9;
+}
+
+.nav__btn::before, .nav__btn::after {
+  content: '';
+  height: 1px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  width: 40px;
+  border-radius: 1px;
+  color: #94ffd9;
+  background-color: #94ffd9;
+  position: absolute;
+}
+
+.nav__btn::before {
+  top: 10px;
+}
+
+.nav__btn::after {
+  bottom: 10px;
 }
 
 .nav .logo {
   width: 50px;
   height: 50px;
   background-image: url("https://via.placeholder.com/50x50");
+}
+
+.nav::after {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  visibility: hidden;
+  -webkit-clip-path: circle(1.4% at 100% 0%);
+          clip-path: circle(1.4% at 100% 0%);
+  z-index: 1;
+}
+
+.nav--active > span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.nav--active > .nav__btn::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 20px;
+}
+
+.nav--active > .nav__btn::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 20px;
+}
+
+.nav--active > .nav__btn > span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.nav--active::after {
+  height: 100vh;
+  visibility: visible;
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
 }
 
 .header {

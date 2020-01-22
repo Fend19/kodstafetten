@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    height: 10vh;
-    padding: 0 5vw 0 5vw;
+    position: relative;
+    padding: 0.5em 5vw 0.5em 5vw;
     background-color: #202020;
 
     h1 {
@@ -13,27 +12,98 @@
         color: #94ffd9;
     }
 
-    nav {
-        color: #94ffd9;
-        padding: 20px;
-    }
-    .nav__btn {
+    &__btn {
         display: flex;
         height: 2.5em;
         place-content: center space-evenly;
         flex-direction: column;
         width: 2.5em;
         cursor: pointer;
-        z-index: 0;
+        position: relative;
+        color: #94ffd9;
+        z-index: 2;
+
         span {
             display: flex;
-            height: 3px;
-            background:#94ffd9;
+            position: absolute;
+            justify-content: center;
+            align-content: center;
+            height: 1px;
+            transition: all 200ms;
+            width: 40px;
+            border-radius: 1px;
+            background: #94ffd9;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            height: 1px;
+            transition: all 200ms;
+            width: 40px;
+            border-radius: 1px;
+            color: #94ffd9;
+            background-color: #94ffd9;
+            position: absolute;
+        }
+
+        &::before {
+            top: 10px;
+        }
+
+        &::after {
+            bottom: 10px;
         }
     }
+
     .logo {
         width: 50px;
         height: 50px;
         background-image: url("https://via.placeholder.com/50x50");
+    }
+
+    &::after {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        transition: all 500ms ease-in-out;
+        visibility: hidden;
+        clip-path: circle(1.4% at 100% 0%);
+        z-index: 1;
+    }
+}
+
+.nav--active {
+    &>span {
+        transform: scale(0);
+        transition: all 200ms;
+    }
+
+    &>.nav__btn {
+
+        &::before {
+            transform: rotate(45deg);
+            top: 20px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: 20px;
+        }
+
+        &>span {
+            transform: scale(0);
+        }
+    }
+
+    &::after {
+        height: 100vh;
+        visibility: visible;
+        clip-path: circle(100%);
     }
 }
