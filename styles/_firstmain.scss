@@ -8,11 +8,21 @@
    justify-content: center;
 }
 
+p {
+    font-family: sans-serif;
+}
+
 h2 {
     font-size: 37px;
-    font-family: Menlo;
+    font-family: Menlo, sans-serif;
     color: #383838;
     text-align: center;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-size: 26px;
+    color: #49a08c;
 }
 
 .button-main{

@@ -1,4 +1,7 @@
 .whycode {
+  background: rgba(0, 0, 0, 0.72);
+  color: #e5e5e5;
+  font-size: 18px;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   &__imgwrapper {
