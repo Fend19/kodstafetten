@@ -1,0 +1,13 @@
+.whycode {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  &__imgwrapper {
+    @extend %wrapper-parent;
+  }
+  &__img {
+    @extend %wrapped-img;
+  }
+  &__text {
+    grid-column: span 2;
+  }
+}
