@@ -1,9 +1,10 @@
-.whycode {
+.whycode, .get-to-know-us {
   background: rgba(0, 0, 0, 0.72);
   color: #e5e5e5;
   font-size: 18px;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  text-align: center;
   &__imgwrapper {
     @extend %wrapper-parent;
   }
@@ -13,4 +14,8 @@
   &__text {
     grid-column: span 2;
   }
+}
+
+.get-to-know-us {
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
 }
