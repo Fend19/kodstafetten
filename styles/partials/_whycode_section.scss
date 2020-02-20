@@ -1,4 +1,5 @@
-.whycode, .get-to-know-us {
+.whycode,
+.get-to-know-us {
   background: rgba(0, 0, 0, 0.72);
   color: #e5e5e5;
   font-size: 18px;
@@ -13,6 +14,7 @@
   }
   &__text {
     grid-column: span 2;
+    padding: 40px;
   }
 }
 

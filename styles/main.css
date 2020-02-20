@@ -1,4 +1,6 @@
-.whycode__imgwrapper, .get-to-know-us__imgwrapper {
+@import url("https://use.typekit.net/vdk2gmc.css");
+.whycode__imgwrapper,
+.get-to-know-us__imgwrapper {
   position: relative;
   block-size: 100%;
   inline-size: 100%;
@@ -6,7 +8,8 @@
   height: 100%;
 }
 
-.whycode__img, .get-to-know-us__img {
+.whycode__img,
+.get-to-know-us__img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -199,7 +202,8 @@
           clip-path: polygon(100.42% 69.25%, 100.88% -0.04%, 17.98% -0.04%, -0.44% 27.67%, 11.84% 79.64%, 53.07% 94.81%);
 }
 
-.whycode, .get-to-know-us {
+.whycode,
+.get-to-know-us {
   background: rgba(0, 0, 0, 0.72);
   color: #e5e5e5;
   font-size: 18px;
@@ -211,8 +215,10 @@
   text-align: center;
 }
 
-.whycode__text, .get-to-know-us__text {
+.whycode__text,
+.get-to-know-us__text {
   grid-column: span 2;
+  padding: 40px;
 }
 
 .get-to-know-us {
@@ -251,6 +257,7 @@ h3 {
   font-family: sans-serif;
   font-size: 26px;
   color: #49a08c;
+  margin-bottom: 30px;
 }
 
 .button-main {
@@ -265,5 +272,26 @@ h3 {
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid whitesmoke;
+}
+
+.footer {
+  background: #202020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 30px;
+  padding-block: 50px;
+}
+
+.footer__text {
+  font-size: 18px;
+  color: #22d6ac;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 /*# sourceMappingURL=main.css.map */
