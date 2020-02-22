@@ -1,14 +1,26 @@
 .lets-code-section {
   background-image: linear-gradient(to bottom, #b1d2cf, #363636 99%, #828181);
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  height: 200px;
 }
+
+.lets-code-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %textStyle;
+}
+
 .buttons-selection {
-  padding: 2em;
+  padding: 1em 0.5em;
   display: flex;
   justify-content: center;
 }
 
 p {
   font-family: sans-serif;
+  @extend %textStyle;
 }
 
 h2 {
@@ -30,7 +42,7 @@ h3 {
   height: 51px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   background-color: black;
-  margin: 2em;
+  margin: 0 0.5em;
   border-radius: 1px;
   color: #5ce9a8;
   font-size: 16px;

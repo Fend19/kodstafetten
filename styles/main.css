@@ -19,6 +19,12 @@
   max-inline-size: 100%;
 }
 
+.lets-code-text, p {
+  font-family: letter-gothic-std, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -230,10 +236,28 @@
 .lets-code-section {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b1d2cf), color-stop(99%, #363636), to(#828181));
   background-image: linear-gradient(to bottom, #b1d2cf, #363636 99%, #828181);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 1fr 1fr / 1fr;
+  height: 200px;
+}
+
+.lets-code-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .buttons-selection {
-  padding: 2em;
+  padding: 1em 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,7 +290,7 @@ h3 {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   background-color: black;
-  margin: 2em;
+  margin: 0 0.5em;
   border-radius: 1px;
   color: #5ce9a8;
   font-size: 16px;
