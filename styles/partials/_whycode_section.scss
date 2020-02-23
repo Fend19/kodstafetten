@@ -4,10 +4,21 @@
   color: #e5e5e5;
   font-size: 18px;
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template: 1fr / repeat(2, 1fr);
   text-align: center;
   &__imgwrapper {
     @extend %wrapper-parent;
+    block-size: 180px;
+    position: relative;
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      background: linear-gradient(0deg, rgba(80, 252, 209, 0.4) 0%, rgba(80, 252, 209, 0) 100%);
+    }
   }
   &__img {
     @extend %wrapped-img;
@@ -15,6 +26,10 @@
   &__text {
     grid-column: span 2;
     padding: 40px;
+    button {
+      inline-size: 220px;
+      margin: 30px 0 0 0;
+    }
   }
 }
 
